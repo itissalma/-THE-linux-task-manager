@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Process Monitor</title>
+    <link rel="stylesheet" type="text/css"  href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="api.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <script>
+        $(function(){
+  console.log("PLEASE WORK");
+});
+    </script>
+    <script type="text/javascript" src="home.js"></script>
+
+</head>
+<body>
+    <img src="TaskFusionLogo.png" alt="logo" class="logo" width="300" height="300">
+    <div class="container">
+    <div class ="infoStuff">
+        <div class="system-info">
+            <h2>System Information</h2>
+            <p>System Name: <span id="sys-name"></span></p>
+            <script>
+                console.log("PLEASE WORK");
+            </script>
+            <p>System Kernel Version: <span id="sys-kernel"></span></p>
+            <p>OS Version: <span id="os-version"></span></p>
+            <p>Host Name: <span id="host-name"></span></p>
+        </div>
+    <div class="system-usage">
+            <h2>System Usage</h2>
+            <div class="progress-bar">
+                <div class="bar" id="memory-bar"></div>
+                <div class="bar-label">Memory</div>
+                <div class="bar-percentage" id="memory-bar-percentage"></div>
+              </div>
+              <div class="progress-bar">
+                <div class="bar" id="cpu-bar"></div>
+                <div class="bar-label">CPU</div>
+                <div class="bar-percentage" id="cpu-bar-percentage"></div>
+              </div>
+              <div class="progress-bar">
+                <div class="bar" id="swap-bar"></div>
+                <div class="bar-label">Swap</div>
+                <div class="bar-percentage" id="swap-bar-percentage"></div>
+              </div>
+        </div>
+    </div>
+        <!--place logo on the left of the process monitor header-->
+        <h1 class="head">Process Monitor</h1>
+        <div class="filters">
+            <label>Sort by:</label>
+            <select id="sort-by">
+                <option value="pid">PID</option>
+                <option value="priority">Priority</option>
+            </select>
+            <label>Filter by:</label>
+            <select id="filter-by">
+                <option value="pid">PID</option>
+                <option value="state">State</option>
+        <option value="cmd">CMD</option>
+            </select>
+        </div>
+            <table id="processes-table">
+                <thead>
+                    <tr>
+                        <th>PID</th>
+                        <th>State</th>
+                        <th>PPID</th>
+                        <th>GID</th>
+                        <th>Session</th>
+                        <th>TTY</th>
+                        <th>TTY GID</th>
+                        <th>Flags</th>
+                        <th>UTime</th>
+                        <th>STime</th>
+                        <th>Priority</th>
+                        <th>Nice</th>
+                        <th>Threads</th>
+                        <th>Start Time</th>
+                        <th>VMemory</th>
+                        <th>CMD</th>
+                        <th>Mem Usage</th>
+                        <th>CPU Usage</th>
+                    </tr>
+                </thead>
+                <tbody id="processes-body">
+                </tbody>
+            </table>
+            <!--add button at the bottom rigt corner to redirect to index.html-->
+            <div class="buttons">
+            <a href="index.html" class="homeButton">Take me back home</a>
+            <a href="visuals.html" class="homeButton">Show me visualization</a>
+        </div>
+    </div>
+    <script type="text/javascript" src="otherjs.js"></script>
+</body>
+</html>
